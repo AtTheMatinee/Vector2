@@ -93,7 +93,6 @@ Vector2& Vector2::operator/=(double s) {
 	return *this;
 }
 
-
 //Useful Vector Operations
 double Vector2::Length() const {
 	return std::sqrt(X*X + Y*Y);
@@ -120,4 +119,28 @@ double Vector2::Cross(Vector2 v1, Vector2 v2) {
 
 std::ostream& operator<<(std::ostream& os, const Vector2& v) {
 	os << "(" << v.X << ", " << v.Y << ")";
+}
+
+bool operator<(const Vector2& lhs, const Vector2& rhs) {
+	return ((lhs.X < rhs.X) || (lhs.X == rhs.X && lhs.Y < rhs.Y));
+}
+
+bool operator>(const Vector2& lhs, const Vector2& rhs) {
+	return operator<(rhs, lhs);
+}
+
+bool operator==(const Vector2& lhs, const Vector2& rhs) {
+	return (lhs.X == rhs.X && lhs.Y == rhs.Y);
+}
+
+bool operator!=(const Vector2& lhs, const Vector2& rhs) {
+	return !operator==(lhs,rhs);
+}
+
+bool operator<=(const Vector2& lhs, const Vector2& rhs) {
+	return !operator>(lhs, rhs);
+}
+
+bool operator>=(const Vector2& lhs, const Vector2& rhs) {
+	return !operator<(lhs,rhs);
 }

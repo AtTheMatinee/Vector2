@@ -47,7 +47,6 @@ public:
 
 	Vector2& operator/=(double s);
 
-
 	//Useful Vector Operations
 	double Length() const;
 
@@ -65,5 +64,16 @@ private:
 };
 
 std::ostream& operator<<(std::ostream& os, const Vector2& v);
+
+//Vector comperison operators
+bool operator<(const Vector2& lhs, const Vector2& rhs);
+
+bool operator==(const Vector2& lhs, const Vector2& rhs);
+
+bool operator<=(const Vector2& lhs, const Vector2& rhs);
+
+bool operator>(const Vector2& lhs, const Vector2& rhs);
+
+bool operator>=(const Vector2& lhs, const Vector2& rhs);
 
 #endif
