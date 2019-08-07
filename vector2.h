@@ -70,6 +70,8 @@ bool operator<(const Vector2& lhs, const Vector2& rhs);
 
 bool operator==(const Vector2& lhs, const Vector2& rhs);
 
+bool operator!=(const Vector2& lhs, const Vector2& rhs);
+
 bool operator<=(const Vector2& lhs, const Vector2& rhs);
 
 bool operator>(const Vector2& lhs, const Vector2& rhs);
